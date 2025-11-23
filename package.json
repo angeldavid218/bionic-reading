@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node --loader ts-node/esm src/index.ts"
+    "dev": "tsx src/index.ts"
   },
   "repository": {
     "type": "git",
@@ -14,13 +14,14 @@
   "keywords": [],
   "author": "Angel Serrano",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/angeldavid218/bionic-reading/issues"
   },
   "homepage": "https://github.com/angeldavid218/bionic-reading#readme",
   "devDependencies": {
     "ts-node": "^10.9.2",
+    "tsx": "^4.20.6",
     "typescript": "^5.9.3"
   },
   "ts-node": {
