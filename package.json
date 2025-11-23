@@ -1,0 +1,33 @@
+{
+  "name": "bionic-reading",
+  "version": "1.0.0",
+  "description": "Bionic Reading is a tool that helps you read faster and easier by using a technique called 'chunking'.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node --loader ts-node/esm src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angeldavid218/bionic-reading.git"
+  },
+  "keywords": [],
+  "author": "Angel Serrano",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/angeldavid218/bionic-reading/issues"
+  },
+  "homepage": "https://github.com/angeldavid218/bionic-reading#readme",
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "ts-node": {
+    "esm": true,
+    "compilerOptions": {
+      "module": "nodenext",
+      "target": "esnext"
+    }
+  }
+}
