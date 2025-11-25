@@ -1,21 +1,14 @@
 import { segmentText } from "./segmenter.js";
+import type { BionicOptions } from "./types/index.js";
 import { wrapFixation } from "./utils/wrapFixation.js";
 
-export function bionicReading(
-  text: string,
-  fixationPercentage: number = 0.3,
-  tag = "strong"
-) {
+export function bionicReading(text: string, options: BionicOptions) {
   const segments = segmentText(text);
 
   return segments
     .map((segment) => {
       if (segment.isWordLike) {
-        return wrapFixation({
-          segment: segment.segment,
-          fixationPercentage,
-          tag,
-        });
+        return wrapFixation(segment.segment, options);
       }
 
       return segment.segment;
