@@ -1,0 +1,191 @@
+# Bionic Reading
+
+Bionic Reading is a tool that helps you read faster and easier by using a technique called 'chunking'. It highlights the first portion of words to guide your eyes and improve reading speed and comprehension.
+
+## Features
+
+- 🚀 **Fast Text Processing**: Efficiently processes text using the Intl.Segmenter API
+- 🎯 **Customizable Fixation**: Adjust the percentage of each word to highlight
+- 🏷️ **Flexible Tagging**: Use any HTML tag for highlighting (default: `strong`)
+- 📦 **TypeScript Support**: Fully typed with TypeScript
+- ✅ **Well Tested**: Comprehensive test coverage with Vitest
+- 🔧 **Modular Architecture**: Clean, modular codebase with separate concerns
+
+## Installation
+
+```bash
+npm install bionic-reading
+```
+
+## Usage
+
+### Basic Usage
+
+```typescript
+import { bionicReading } from "bionic-reading";
+
+const text = "Hello, world!";
+const result = bionicReading(text, {
+  fixationPercentage: 0.3,
+  tag: "strong",
+});
+
+console.log(result);
+// Output: "<strong>He</strong>llo, <strong>wo</strong>rld!"
+```
+
+### With Default Options
+
+```typescript
+import { bionicReading, defaultOptions } from "bionic-reading";
+
+const text = "This is a sample text";
+const result = bionicReading(text, defaultOptions);
+```
+
+### Custom Options
+
+```typescript
+import { bionicReading } from "bionic-reading";
+
+const text = "Custom highlighting example";
+const result = bionicReading(text, {
+  fixationPercentage: 0.4, // Highlight 40% of each word
+  tag: "em", // Use <em> tag instead of <strong>
+});
+```
+
+## API Reference
+
+### `bionicReading(text: string, options: BionicOptions): string`
+
+The main function that converts text to bionic reading format.
+
+**Parameters:**
+
+- `text` (string): The text to convert
+- `options` (BionicOptions): Configuration options
+
+**Returns:** `string` - The text with bionic reading formatting applied
+
+### `BionicOptions`
+
+```typescript
+interface BionicOptions {
+  fixationPercentage: number; // Percentage of word to highlight (0-1)
+  tag?: string; // HTML tag to use (default: "strong")
+}
+```
+
+### `defaultOptions`
+
+```typescript
+const defaultOptions = {
+  fixationPercentage: 0.3,
+  tag: "strong",
+};
+```
+
+### Exported Functions
+
+- `bionicReading(text: string, options: BionicOptions): string` - Main conversion function
+- `segmentText(text: string): Segmenter[]` - Segment text into words and punctuation
+- `wrapFixation(segment: string, options?: BionicOptions): string` - Wrap a segment with fixation tags
+- `defaultOptions: Options` - Default configuration options
+
+### Exported Types
+
+- `BionicOptions` - Options interface for bionic reading
+- `Options` - Type for default options
+- `Segmenter` - Segment interface from text segmentation
+- `WrapFixationProps` - Props for wrap fixation function
+
+## How It Works
+
+1. **Text Segmentation**: The text is segmented into words and punctuation using the `Intl.Segmenter` API
+2. **Word Detection**: Only word-like segments are processed (punctuation and spaces are left unchanged)
+3. **Fixation Calculation**: For each word, a fixation point is calculated based on the `fixationPercentage`
+4. **Tag Wrapping**: The fixation portion of each word is wrapped with the specified HTML tag
+
+## Development
+
+### Prerequisites
+
+- Node.js
+- npm
+
+### Setup
+
+```bash
+npm install
+```
+
+### Build
+
+```bash
+npm run build
+```
+
+### Testing
+
+Run the test suite:
+
+```bash
+npm test
+```
+
+The project uses [Vitest](https://vitest.dev/) for testing with coverage enabled.
+
+### Development Mode
+
+```bash
+npm run dev
+```
+
+## Project Structure
+
+```
+src/
+├── index.ts              # Main entry point (exports all modules)
+├── convert.ts            # Main bionic reading conversion function
+├── segmenter.ts          # Text segmentation using Intl.Segmenter
+├── options.ts            # Default options and types
+├── types/
+│   └── index.ts          # TypeScript type definitions
+├── utils/
+│   └── wrapFixation.ts   # Utility to wrap text with HTML tags
+└── tests/
+    ├── bionicReadint.test.ts
+    ├── segmenter.test.ts
+    └── utils/
+        └── wrapFixation.test.ts
+```
+
+### Architecture
+
+The project now uses a clean, modular architecture:
+
+- **Text Segmentation**: Uses native `Intl.Segmenter` API for accurate word segmentation
+- **Separation of Concerns**: Each module has a single responsibility
+- **Type Safety**: Full TypeScript support with strict type checking
+- **ES Modules**: Modern ES module syntax throughout
+
+## License
+
+ISC
+
+## Author
+
+Angel Serrano
+
+## Repository
+
+[GitHub Repository](https://github.com/angeldavid218/bionic-reading)
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## Support
+
+If you encounter any issues, please file them on the [GitHub Issues](https://github.com/angeldavid218/bionic-reading/issues) page.
