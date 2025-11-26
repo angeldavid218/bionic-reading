@@ -1,8 +1,9 @@
 {
   "name": "smart-reading",
   "version": "1.0.0",
-  "description": "Smart Reading is a tool that helps you read faster and easier by using a technique called 'chunking'.",
-  "main": "./dist/index.js",
+  "description": "Smart Reading is a tool that helps you read faster and easier using cognitive chunking.",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
@@ -16,9 +17,10 @@
     "README.md"
   ],
   "scripts": {
-    "test": "vitest --run --reporter verbose --globals",
+    "test": "vitest --run --reporter=verbose --globals",
     "dev": "tsx src/index.ts",
-    "build": "tsup"
+    "build": "tsup src/index.ts --dts --format esm,cjs",
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -26,12 +28,11 @@
   },
   "keywords": [
     "bionic-reading",
-    "reading",
-    "speed",
+    "smart-reading",
     "reading-speed",
+    "focus-reading",
     "reading-technique",
-    "reading-skills",
-    "TDAH-reading"
+    "cognitive-reading"
   ],
   "author": "Angel Serrano",
   "license": "ISC",
@@ -47,12 +48,5 @@
     "tsx": "^4.20.6",
     "typescript": "^5.9.3",
     "vitest": "^4.0.14"
-  },
-  "ts-node": {
-    "esm": true,
-    "compilerOptions": {
-      "module": "nodenext",
-      "target": "esnext"
-    }
   }
 }

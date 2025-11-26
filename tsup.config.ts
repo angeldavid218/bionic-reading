@@ -8,5 +8,6 @@ export default defineConfig({
   skipNodeModulesBundle: true,
   dts: true,
   clean: true,
+  splitting: false,
   external: ["vitest"],
 });
