@@ -1,6 +1,6 @@
 import type { BionicOptions } from "../types/index.js";
 import { defaultOptions } from "../options.js";
-export function wrapFixation(segment: string, options: BionicOptions) {
+export function wrapFixation(segment: string, options?: BionicOptions) {
   const { fixationPercentage, tag } = { ...defaultOptions, ...options };
 
   const fixationLength = Math.ceil(segment.length * fixationPercentage);

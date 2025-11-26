@@ -1,3 +1,4 @@
-import * from "./convert.js";
-import * as types from "./types/index.js";
-import * from "options.js";
+export * from "./convert.js";
+export * as types from "./types/index.js";
+export * from "./options.js";
+export * from "./segmenter.js";

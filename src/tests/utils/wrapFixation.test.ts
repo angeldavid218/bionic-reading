@@ -21,4 +21,10 @@ describe("WrapFixation", () => {
     const result = wrapFixation(segment, options);
     expect(result).toBe("<em>Hell</em>o, world!");
   });
+
+  it("Should use the default options if no options are provided", () => {
+    const segment = "Hello, world!";
+    const result = wrapFixation(segment);
+    expect(result).toBe("<strong>Hell</strong>o, world!");
+  });
 });
