@@ -1,6 +1,8 @@
-# Bionic Reading
+# Smart Reading
 
-Bionic Reading is a tool that helps you read faster and easier by using a technique called 'chunking'. It highlights the first portion of words to guide your eyes and improve reading speed and comprehension.
+Smart Reading is a tool that helps you read faster and easier by using a technique called 'chunking'. It highlights the first portion of words to guide your eyes and improve reading speed and comprehension.
+
+> **Note**: This library is inspired by the [Bionic Reading](https://bionic-reading.com/) brand and technique. Bionic Reading is a trademarked reading method that uses strategic highlighting to guide eye fixation points. Smart Reading implements a similar approach as an open-source alternative.
 
 ## Features
 
@@ -59,14 +61,14 @@ const result = bionicReading(text, {
 
 ### `bionicReading(text: string, options: BionicOptions): string`
 
-The main function that converts text to bionic reading format.
+The main function that converts text to smart reading format (inspired by Bionic Reading technique).
 
 **Parameters:**
 
 - `text` (string): The text to convert
 - `options` (BionicOptions): Configuration options
 
-**Returns:** `string` - The text with bionic reading formatting applied
+**Returns:** `string` - The text with smart reading formatting applied
 
 ### `BionicOptions`
 
@@ -95,17 +97,19 @@ const defaultOptions = {
 
 ### Exported Types
 
-- `BionicOptions` - Options interface for bionic reading
+- `BionicOptions` - Options interface for smart reading (inspired by Bionic Reading)
 - `Options` - Type for default options
 - `Segmenter` - Segment interface from text segmentation
 - `WrapFixationProps` - Props for wrap fixation function
 
 ## How It Works
 
+Smart Reading uses a technique inspired by Bionic Reading to improve reading speed and comprehension:
+
 1. **Text Segmentation**: The text is segmented into words and punctuation using the `Intl.Segmenter` API
 2. **Word Detection**: Only word-like segments are processed (punctuation and spaces are left unchanged)
-3. **Fixation Calculation**: For each word, a fixation point is calculated based on the `fixationPercentage`
-4. **Tag Wrapping**: The fixation portion of each word is wrapped with the specified HTML tag
+3. **Fixation Calculation**: For each word, a fixation point is calculated based on the `fixationPercentage` - this mimics the Bionic Reading approach of highlighting the first portion of words
+4. **Tag Wrapping**: The fixation portion of each word is wrapped with the specified HTML tag to create visual emphasis
 
 ## Development
 
@@ -147,7 +151,7 @@ npm run dev
 ```
 src/
 ├── index.ts              # Main entry point (exports all modules)
-├── convert.ts            # Main bionic reading conversion function
+├── convert.ts            # Main smart reading conversion function
 ├── segmenter.ts          # Text segmentation using Intl.Segmenter
 ├── options.ts            # Default options and types
 ├── types/
