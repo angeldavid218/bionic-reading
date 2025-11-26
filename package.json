@@ -5,13 +5,22 @@
   "main": "index.js",
   "scripts": {
     "test": "vitest --run --reporter verbose --globals",
-    "dev": "tsx src/index.ts"
+    "dev": "tsx src/index.ts",
+    "build": "tsup"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/angeldavid218/bionic-reading.git"
   },
-  "keywords": [],
+  "keywords": [
+    "bionic-reading",
+    "reading",
+    "speed",
+    "reading-speed",
+    "reading-technique",
+    "reading-skills",
+    "TDAH-reading"
+  ],
   "author": "Angel Serrano",
   "license": "ISC",
   "type": "module",
@@ -22,6 +31,7 @@
   "devDependencies": {
     "@vitest/coverage-v8": "^4.0.14",
     "ts-node": "^10.9.2",
+    "tsup": "^8.5.1",
     "tsx": "^4.20.6",
     "typescript": "^5.9.3",
     "vitest": "^4.0.14"
