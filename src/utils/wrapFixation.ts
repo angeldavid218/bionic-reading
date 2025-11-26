@@ -6,5 +6,5 @@ export function wrapFixation(segment: string, options: BionicOptions) {
   const fixationLength = Math.ceil(segment.length * fixationPercentage);
   const fixation = segment.slice(0, fixationLength);
   const rest = segment.slice(fixationLength);
-  return `${tag}${fixation}${tag}${rest}`;
+  return `<${tag}>${fixation}</${tag}>${rest}`;
 }
