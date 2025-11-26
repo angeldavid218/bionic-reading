@@ -1,8 +1,20 @@
 {
-  "name": "bionic-reading",
+  "name": "smart-reading",
   "version": "1.0.0",
-  "description": "Bionic Reading is a tool that helps you read faster and easier by using a technique called 'chunking'.",
-  "main": "index.js",
+  "description": "Smart Reading is a tool that helps you read faster and easier by using a technique called 'chunking'.",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "scripts": {
     "test": "vitest --run --reporter verbose --globals",
     "dev": "tsx src/index.ts",
@@ -10,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/angeldavid218/bionic-reading.git"
+    "url": "git+https://github.com/angeldavid218/smart-reading.git"
   },
   "keywords": [
     "bionic-reading",
@@ -25,9 +37,9 @@
   "license": "ISC",
   "type": "module",
   "bugs": {
-    "url": "https://github.com/angeldavid218/bionic-reading/issues"
+    "url": "https://github.com/angeldavid218/smart-reading/issues"
   },
-  "homepage": "https://github.com/angeldavid218/bionic-reading#readme",
+  "homepage": "https://github.com/angeldavid218/smart-reading#readme",
   "devDependencies": {
     "@vitest/coverage-v8": "^4.0.14",
     "ts-node": "^10.9.2",
