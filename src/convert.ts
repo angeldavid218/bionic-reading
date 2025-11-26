@@ -1,8 +1,8 @@
 import { segmentText } from "./segmenter.js";
-import type { BionicOptions } from "./types/index.js";
+import type { SmartReadingOptions } from "./types/index.js";
 import { wrapFixation } from "./utils/wrapFixation.js";
 
-export function bionicReading(text: string, options: BionicOptions) {
+export function smartReading(text: string, options: SmartReadingOptions) {
   const segments = segmentText(text);
 
   return segments

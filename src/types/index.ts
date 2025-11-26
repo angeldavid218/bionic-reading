@@ -4,7 +4,7 @@ export interface WrapFixationProps {
   tag: string;
 }
 
-export interface BionicOptions {
+export interface SmartReadingOptions {
   fixationPercentage: number;
   tag?: string;
 }

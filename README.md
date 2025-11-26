@@ -2,7 +2,7 @@
 
 Smart Reading is a tool that helps you read faster and easier by using a technique called 'chunking'. It highlights the first portion of words to guide your eyes and improve reading speed and comprehension.
 
-> **Note**: This library is inspired by the [Bionic Reading](https://bionic-reading.com/) brand and technique. Bionic Reading is a trademarked reading method that uses strategic highlighting to guide eye fixation points. Smart Reading implements a similar approach as an open-source alternative.
+> **Note**: This library is inspired by the [smart Reading](https://smart-reading.com/) brand and technique. smart Reading is a trademarked reading method that uses strategic highlighting to guide eye fixation points. Smart Reading implements a similar approach as an open-source alternative.
 
 ## Features
 
@@ -16,7 +16,7 @@ Smart Reading is a tool that helps you read faster and easier by using a techniq
 ## Installation
 
 ```bash
-npm install bionic-reading
+npm install smart-reading
 ```
 
 ## Usage
@@ -24,10 +24,10 @@ npm install bionic-reading
 ### Basic Usage
 
 ```typescript
-import { bionicReading } from "bionic-reading";
+import { smartReading } from "smart-reading";
 
 const text = "Hello, world!";
-const result = bionicReading(text, {
+const result = smartReading(text, {
   fixationPercentage: 0.3,
   tag: "strong",
 });
@@ -39,19 +39,19 @@ console.log(result);
 ### With Default Options
 
 ```typescript
-import { bionicReading, defaultOptions } from "bionic-reading";
+import { smartReading, defaultOptions } from "smart-reading";
 
 const text = "This is a sample text";
-const result = bionicReading(text, defaultOptions);
+const result = smartReading(text, defaultOptions);
 ```
 
 ### Custom Options
 
 ```typescript
-import { bionicReading } from "bionic-reading";
+import { smartReading } from "smart-reading";
 
 const text = "Custom highlighting example";
-const result = bionicReading(text, {
+const result = smartReading(text, {
   fixationPercentage: 0.4, // Highlight 40% of each word
   tag: "em", // Use <em> tag instead of <strong>
 });
@@ -59,21 +59,21 @@ const result = bionicReading(text, {
 
 ## API Reference
 
-### `bionicReading(text: string, options: BionicOptions): string`
+### `smartReading(text: string, options: smartOptions): string`
 
-The main function that converts text to smart reading format (inspired by Bionic Reading technique).
+The main function that converts text to smart reading format (inspired by smart Reading technique).
 
 **Parameters:**
 
 - `text` (string): The text to convert
-- `options` (BionicOptions): Configuration options
+- `options` (smartOptions): Configuration options
 
 **Returns:** `string` - The text with smart reading formatting applied
 
-### `BionicOptions`
+### `smartOptions`
 
 ```typescript
-interface BionicOptions {
+interface smartOptions {
   fixationPercentage: number; // Percentage of word to highlight (0-1)
   tag?: string; // HTML tag to use (default: "strong")
 }
@@ -90,25 +90,25 @@ const defaultOptions = {
 
 ### Exported Functions
 
-- `bionicReading(text: string, options: BionicOptions): string` - Main conversion function
+- `smartReading(text: string, options: smartOptions): string` - Main conversion function
 - `segmentText(text: string): Segmenter[]` - Segment text into words and punctuation
-- `wrapFixation(segment: string, options?: BionicOptions): string` - Wrap a segment with fixation tags
+- `wrapFixation(segment: string, options?: smartOptions): string` - Wrap a segment with fixation tags
 - `defaultOptions: Options` - Default configuration options
 
 ### Exported Types
 
-- `BionicOptions` - Options interface for smart reading (inspired by Bionic Reading)
+- `smartOptions` - Options interface for smart reading (inspired by smart Reading)
 - `Options` - Type for default options
 - `Segmenter` - Segment interface from text segmentation
 - `WrapFixationProps` - Props for wrap fixation function
 
 ## How It Works
 
-Smart Reading uses a technique inspired by Bionic Reading to improve reading speed and comprehension:
+Smart Reading uses a technique inspired by smart Reading to improve reading speed and comprehension:
 
 1. **Text Segmentation**: The text is segmented into words and punctuation using the `Intl.Segmenter` API
 2. **Word Detection**: Only word-like segments are processed (punctuation and spaces are left unchanged)
-3. **Fixation Calculation**: For each word, a fixation point is calculated based on the `fixationPercentage` - this mimics the Bionic Reading approach of highlighting the first portion of words
+3. **Fixation Calculation**: For each word, a fixation point is calculated based on the `fixationPercentage` - this mimics the smart Reading approach of highlighting the first portion of words
 4. **Tag Wrapping**: The fixation portion of each word is wrapped with the specified HTML tag to create visual emphasis
 
 ## Development
@@ -159,7 +159,7 @@ src/
 ├── utils/
 │   └── wrapFixation.ts   # Utility to wrap text with HTML tags
 └── tests/
-    ├── bionicReadint.test.ts
+    ├── smartReading.test.ts
     ├── segmenter.test.ts
     └── utils/
         └── wrapFixation.test.ts
@@ -184,7 +184,7 @@ Angel Serrano
 
 ## Repository
 
-[GitHub Repository](https://github.com/angeldavid218/bionic-reading)
+[GitHub Repository](https://github.com/angeldavid218/smart-reading)
 
 ## Contributing
 
@@ -192,4 +192,4 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## Support
 
-If you encounter any issues, please file them on the [GitHub Issues](https://github.com/angeldavid218/bionic-reading/issues) page.
+If you encounter any issues, please file them on the [GitHub Issues](https://github.com/angeldavid218/smart-reading/issues) page.
