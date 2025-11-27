@@ -1,5 +1,8 @@
 # Smart Reading
 
+![npm version](https://img.shields.io/npm/v/smart-reading)
+![npm downloads](https://img.shields.io/npm/dm/smart-reading)
+
 Smart Reading is a tool that helps you read faster and easier by using a technique called 'chunking'. It highlights the first portion of words to guide your eyes and improve reading speed and comprehension.
 
 > **Note**: This library is inspired by the [Bionic Reading](https://bionic-reading.com/) brand and technique. Bionic Reading is a trademarked reading method that uses strategic highlighting to guide eye fixation points. Smart Reading implements a similar approach as an open-source alternative.
