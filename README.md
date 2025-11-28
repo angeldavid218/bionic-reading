@@ -179,7 +179,7 @@ The project now uses a clean, modular architecture:
 
 ## License
 
-ISC
+MIT
 
 ## Author
 
