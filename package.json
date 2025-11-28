@@ -1,6 +1,6 @@
 {
   "name": "smart-reading",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Smart Reading is a tool that helps you read faster and easier using cognitive chunking.",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
