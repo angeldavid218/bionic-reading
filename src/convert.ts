@@ -1,6 +1,6 @@
-import { segmentText } from "./segmenter.js";
-import type { SmartReadingOptions } from "./types/index.js";
-import { wrapFixation } from "./utils/wrapFixation.js";
+import { segmentText } from "./segmenter.ts";
+import type { SmartReadingOptions } from "./types/index.ts";
+import { wrapFixation } from "./utils/wrapFixation.ts";
 
 export function smartReading(text: string, options: SmartReadingOptions) {
   const segments = segmentText(text);

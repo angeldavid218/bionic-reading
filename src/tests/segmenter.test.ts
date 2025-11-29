@@ -1,5 +1,5 @@
 import { it, expect, describe } from "vitest";
-import { segmentText } from "../segmenter.js";
+import { segmentText } from "../segmenter.ts";
 
 describe("Segmenter", () => {
   it("Should return an array of segments", () => {

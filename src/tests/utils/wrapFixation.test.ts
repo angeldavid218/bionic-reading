@@ -1,5 +1,5 @@
 import { it, expect, describe } from "vitest";
-import { wrapFixation } from "../../utils/wrapFixation.js";
+import { wrapFixation } from "../../utils/wrapFixation.ts";
 
 describe("WrapFixation", () => {
   it("Should wrap the segment with the tag and the fixation percentage", () => {

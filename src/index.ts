@@ -1,4 +1,4 @@
-export * from "./convert.js";
-export * as types from "./types/index.js";
-export * from "./options.js";
-export * from "./segmenter.js";
+export * from "./convert.ts";
+export * as types from "./types/index.ts";
+export * from "./options.ts";
+export * from "./segmenter.ts";

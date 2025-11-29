@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { smartReading } from "../convert.js";
+import { smartReading } from "../convert.ts";
 describe("Smart Reading", () => {
   it("Should return the text with the smart reading", () => {
     const text = "Hello, world!";
